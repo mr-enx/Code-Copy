@@ -2,15 +2,51 @@
   "name": "code-copy",
   "displayName": "Code Copy",
   "publisher": "genius-programmer",
-  "description": "Copy workspace file paths to clipboard with extension filters",
-  "version": "0.0.1",
+  "description": "Copy workspace file contents to clipboard with explorer-like file selection",
+  "version": "1.0.2",
   "license": "MIT",
   "icon": "media/logo.png",
-  "engines": { "vscode": "^1.75.0" },
-  "categories": ["Other"],
-  "activationEvents": [],
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:codeCopy.view",
+    "onCommand:codeCopy.openSettings",
+    "onCommand:codeCopy.refreshFiles"
+  ],
   "main": "./out/extension.js",
   "contributes": {
+    "commands": [
+      {
+        "command": "codeCopy.refreshFiles",
+        "title": "Refresh Files",
+        "category": "Code Copy",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "codeCopy.openSettings",
+        "title": "Code Copy Settings",
+        "category": "Code Copy",
+        "icon": "$(gear)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "codeCopy.refreshFiles",
+          "when": "view == codeCopy.view",
+          "group": "navigation@1"
+        },
+        {
+          "command": "codeCopy.openSettings",
+          "when": "view == codeCopy.view",
+          "group": "navigation@2"
+        }
+      ]
+    },
     "viewsContainers": {
       "activitybar": [
         {
