@@ -5,9 +5,6 @@ node_modules/
 out/
 dist/
 
-# VSIX package
-*.vsix
-
 # Logs
 *.log
 npm-debug.log*
