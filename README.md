@@ -1,5 +1,6 @@
 # Code Copy
 
+ dddddddddddddddddddddddddddd
 A VS Code extension that lets you quickly copy file and folder contents with flexible include/exclude filters.
 
 ## Features
@@ -19,7 +20,6 @@ npm install
 
 bash
 npm run compile
- dddddddddddddddddddddddddddd
 This compiles the TypeScript source from `src/` into the `out/` folder.
 
 ### 3. Run in development
