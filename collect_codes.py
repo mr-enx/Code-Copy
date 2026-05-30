@@ -1076,7 +1076,7 @@ class CodeCollectorApp:
 
             self.save_app_config()
 
-            if self.folder_path.get().strip():
+            if self.folder_path.get().strip(): 
                 self.scan_folder()
 
             win.destroy()
